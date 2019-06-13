@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+   name: navetes
+spec:
+   replicas: 1
+   template:
+     metadata:
+       labels:
+         app: navetes
+     spec:
+       volumes:
+         - name: simple-vol
+           emptyDir: {}
+
+       containers:
+         - name: navetes
+           volumeMounts:
+             - name: simple-vol
+               mountPath: /var/workspace
+           image: cdsap/navetesbase
+           command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
+           command: [ "/bin/bash", "-ce", "git clone https://github.com/cdsap/Talaiot" ]
+           ports:
+             - containerPort: 88
