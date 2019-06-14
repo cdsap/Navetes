@@ -25,6 +25,4 @@ RUN sdkmanager 'extras;google;google_play_services'
 RUN mkdir -p /var/workspace
 RUN cd /var/workspace
 
-CMD git clone $repo
-
 WORKDIR "var/workspace/"

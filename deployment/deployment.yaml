@@ -18,8 +18,7 @@ spec:
            volumeMounts:
              - name: simple-vol
                mountPath: /var/workspace
-           image: cdsap/navetesbase
+           image: cdsap/navetes
            command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
-           command: [ "/bin/bash", "-ce", "git clone https://github.com/cdsap/Talaiot" ]
            ports:
              - containerPort: 88
