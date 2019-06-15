@@ -7,6 +7,9 @@
 ![Alt text](resources/flow.png?raw=true "Flow")
 
 
+
+#### Grafana & Influx
+
 ```
  helm install stable/grafana
 
