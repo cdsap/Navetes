@@ -23,7 +23,7 @@ spec:
           mountPath: /repo
   containers:
     - name:  agent
-      image: cdsap/navetesbase
+      image: asia.gcr.io/kotlin-client-server/navetesbase
       args: ['sleep', '100000']
       volumeMounts:
         - name: git-repo
